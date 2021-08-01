@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <title>Document</title>
+
+    <style>
+        
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  
+  #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  
+  #formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #formFooter a{
+      color: #0062cc;
+  }
+  
+input{
+    width: 80%;
+    padding: 10px;
+}
+
+  .fadeIn{
+      margin: 10px;
+  }
+
+.btn{
+    background-color: #0062cc;
+    color: #fff;
+    display: block;
+    margin-bottom: 20px;
+}
+  
+
+    </style>
+
+</head>
+
+<body>
+
+    {{>navbar}}
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/004/088/original/user.png" id="icon" alt="User Icon" style="max-width: 100px; margin: 20px 0"/>
+            </div>
+  <!-- Login Form -->
+            <form action="/login" method="POST">
+                <input type="email" id="login" class="fadeIn second" placeholder="Email ID" required name="email">
+                <input type="password" id="password" class="fadeIn third" placeholder="Password" required name="password">
+                <input type="submit" class="fadeIn fourth btn" value="Log In">
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a href="/register">Create new Account</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
